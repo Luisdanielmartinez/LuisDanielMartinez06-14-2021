@@ -25,6 +25,7 @@ namespace TaskList.ViewModels
         public AddTaskViewModel(TaskModel task)
         {
             isEdit = task == null ? false : true;
+            Title = isEdit ? "Edit Task" : "Add Task";
             Task = task == null ? new TaskModel() : task;
             InitialDb();
         }
